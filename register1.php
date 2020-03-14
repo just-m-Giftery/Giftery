@@ -19,7 +19,7 @@
         
         <section class="myform ">
            <div class="container d-flex justify-content-center">
-            <form >
+            <form method="post">
                 
                <div class=" div-inpt position-relative"> <input id="userName"  class="form-control myinpt" type="text" name="Username" required placeholder="Username" />
                  <i class=" myicone3 fa fa-user"></i>
@@ -52,7 +52,7 @@
                    " type="submit"> Sign Up</button></div>
                 
                 <div class="text-center py-2">
-                    <a class="forgot-a" href="login1.html">
+                    <a class="forgot-a" href="login1.php">
                   <span class="frogot">Already Have an Account  ?  <span class="create"> Log in  </span></span></a>
                 
                 </div>
