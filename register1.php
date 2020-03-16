@@ -1,3 +1,12 @@
+<?php
+
+
+session_start();
+session_unset();
+ 
+?>
+
+
 <html> 
   <head>
       <title>Registration</title>
@@ -13,7 +22,7 @@
         
         <section class="top">
             <div class="container d-flex justify-content-center text-center py-4">
-           <div><a href="index1.html"><h2>TheGiftery</h2></a></div>
+           <div><a href="register1.php"><h2>TheGiftery</h2></a></div>
             </div>
         </section>
         
@@ -21,11 +30,11 @@
            <div class="container d-flex justify-content-center">
             <form method="post">
                 
-               <div class=" div-inpt position-relative"> <input id="userName"  class="form-control myinpt" type="text" name="Username" required placeholder="Username" />
+               <div class=" div-inpt position-relative"> <input id="userName"  class="form-control myinpt" type="text" name="uname" required placeholder="Username" />
                  <i class=" myicone3 fa fa-user"></i>
                 </div> 
                 
-                <div class=" div-inpt position-relative"> <input id="email"          class="form-control myinpt" type="email" name="Useremail" required placeholder="Email" />
+                <div class=" div-inpt position-relative"> <input id="email"          class="form-control myinpt" type="email" name="email" required placeholder="Email" />
                  <i class=" myicone3 fa fa-envelope"></i>
                 </div> 
                  <div class=" div-inpt position-relative"> <input id="address"          class="form-control myinpt" type="text" name="address" required placeholder="Address" />
@@ -33,7 +42,7 @@
                 </div> 
                 
                 <div class=" div_inpt position-relative">  
-                <input id="input" class="form-control myinpt" type="password" name="UserPassword" required placeholder="password" />
+                <input id="input" class="form-control myinpt" type="password" name="pass" required placeholder="password" />
                  <i  class=" myicone fa fa-eye "></i>
                 <i  id="myicone"   class=" icone myicone  fa fa-eye-slash"></i>
               
@@ -48,7 +57,7 @@
                <div class="py-2 text-center"> 
                    <input required type="checkbox" class="checkbox"  />
                    <span  class="check-info">I agree to TheGiftery Privacy Police</span></div>
-               <div class="text-center py-3"> <button id="myBtn" class="mybtn btn btn-primary form
+               <div class="text-center py-3"> <button id="myBtn" name="signin" class="mybtn btn btn-primary form
                    " type="submit"> Sign Up</button></div>
                 
                 <div class="text-center py-2">
@@ -62,7 +71,7 @@
         
         <section class="mb-3 px-5">
             <span class="Copyright">Copyright © 2020 UIGRID | All Rights Reserved | 
-                <span class="Copyright-link"><a href="index1.html">www.thegiftery.com</a> </span>
+                <span class="Copyright-link"><a href="register1.php">www.thegiftery.com</a> </span>
             </span>
         </section>
         
@@ -75,3 +84,25 @@
             <script src="js/register.js"></script>
      </body>
 </html>
+
+<?php
+
+
+ 	include 'client.php';
+
+if(isset($_POST['signin']))
+{
+	$data=new Tourist();
+   	$uname =$_POST['uname'];
+   	$email =$_POST['email'];
+    $email =$_POST['address'];
+   	$pass  =$_POST['pass'];
+	$data->Register($uname,$email,$pass);
+	if(!isset($_SESSION['loggedin']))
+		{
+			$_SESSION['redirectURL']=$_SESSION['REQUEST_URI'];
+			header('location:login1.php');
+		}
+
+}
+?>
