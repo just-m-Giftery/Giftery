@@ -1,4 +1,40 @@
+<?php
 
+error_reporting(0);
+ session_start();
+$userprofile=	$_SESSION['username'];
+if($userprofile == true)
+{
+    
+}
+else
+{
+    	header('location:login1.php');
+}
+include 'Admin.php';
+$A = new Admin();
+if(isset($_POST['addproduct']))
+{
+    
+   	$pname=$_POST['pname'];
+   	$pdesc=$_POST['pdesc'];
+    $price=$_POST['pprice'];
+   	$pimg=$_POST['pimg'];
+    $ptype=$_POST['ptype'];
+    $A->addproduct_A($pname,$price,$pdesc,$ptype,$pimg);
+}
+
+if(isset($_POST['deleteproduct']))
+{
+  
+   	$dpname=$_POST['upname'];
+  
+    $A->Deleteproduct_A($dpname);
+}
+
+
+
+?>
 <html> 
   <head>
       <title>admin</title>
@@ -8,10 +44,10 @@
       <link rel="stylesheet" href="css/admindb.css" />
   </head>
     <body>
-    
+    <a class="btn btn-primary float-right mt-5 mx-5 text-light" href="login1.php">logout</a>
             <section class="top">
             <div class="container d-flex justify-content-center text-center pt-2 ">
-             <div><a href="index1.html"><h2>TheGiftery</h2></a></div>
+             <div><a href="Admindb.php"><h2>TheGiftery</h2></a></div>
             </div>
         </section>
 
@@ -20,7 +56,7 @@
                 <div class="row d-flex justify-content-around">
                     <div class="col-md-4 ">
              
-                <form method="post " class="py-2">
+                <form method="post" class="py-2">
                     <h3 class=" py-3 text-center text-primary">
                     Add product
                     </h3>
@@ -48,7 +84,7 @@
 
                    <div class="text-center py-3"> 
                <button id="myBtn_log" class="mybtn_log btn btn-primary form
-                       " type="submit" name="addplace"> Add </button></div>
+                       " type="submit" name="addproduct"> Add </button></div>
 
 
                   </form>
@@ -77,7 +113,7 @@
 
          <section class="py-2 mt-4 px-5 border-top border-primary fixed-bottom footeer">
             <span class="Copyright">Copyright © 2020 UIGRID | All Rights Reserved | 
-                <span class="Copyright-link"><a href="index1.html">www.thegiftery.com</a> </span>
+                <span class="Copyright-link"><a href="Admindb.php">www.thegiftery.com</a> </span>
             </span>
         </section>
 
