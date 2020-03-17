@@ -116,7 +116,7 @@ else
                      <div class="card-body text-center">
                         <h5 class="card-title ">'.$pname.'</h5>
                         <p class="card-text ">'.$pdesc.'</p>
-                        <p class="card-text ">'.$price.'</p>
+                        <p class="card-text fa-2x ">'.$price.'.00EGP </p>
                         <a href="#" class="btn btn-primary ">Buy now</a>
                       </div>
                     </div></div>';

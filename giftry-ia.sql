@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2020 at 03:31 PM
+-- Generation Time: Mar 17, 2020 at 02:28 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.40
 
@@ -42,11 +42,9 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `price`, `product_desc`, `img`, `type`) VALUES
-(0, 'hhhh', 80, '        kkkk                 ', 'person_2.jpg', 'h'),
-(0, 'yyy', 90, '                 llll        ', 'person_3.jpg', 'r'),
-(0, 'rrr', 80, '       hhhhuuuu                  ', 'person_4.jpg', ''),
-(0, 'ttt', 90, '      kkkkkkllll                   ', '9p.jpeg', ''),
-(0, 'qqqqqqqqqq', 852, '      ggggggggrreeee                   ', 'images.png', '');
+(0, 'Al Abd Biscuit With Coconut- 15 Pieces', 32, 'Brand: Al Abd\r\nType: Biscuits, Cookies & Crackers\r\nSize: 250 Gm\r\nPackaging: Box           ', 'item_XXL_38655519_150657188.jpg', ''),
+(0, 'Dell Inspiron G5 5590', 27666, '             Gaming Laptop - Intel Core i7-9750H, 15.6 Inch, 1 TB Plus 512 SSD, 16 GB RAM, NVIDIA Ge', 'item_XL_99997917_62e00e7b657be.jpg', ''),
+(0, 'Lazurd Set Of 13 Pieces Cookware - Pink', 925, '       Brand:Lazurd\r\nType:Cookware Sets\r\nColor:Pink\r\nMaterial:Granite\r\nDiameter:16-18-22-26-18-22-24', 'item_XL_90204017_e9916f48e60c0.jpg', '');
 
 -- --------------------------------------------------------
 
