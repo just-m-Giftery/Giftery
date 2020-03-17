@@ -78,7 +78,7 @@ if(isset($_POST['deleteproduct']))
                     <h6 class="text-center pt-4 px-2 text-primary">
                     product photo
                     </h6>
-                  <input class="py-2 px-4 text-center" type="file" id="Place Photo"
+                  <input required class="py-2 px-4 text-center" type="file" id="Place Photo"
                          name="pimg">
                 
 
