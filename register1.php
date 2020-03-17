@@ -1,6 +1,23 @@
 <?php
 session_start();
 session_unset();
+ 	include 'client.php';
+
+if(isset($_POST['signin']))
+{
+	$data=new client();
+   	$uname =$_POST['uname'];
+   	$email =$_POST['email'];
+    $email =$_POST['address'];
+   	$pass  =$_POST['pass'];
+	$data->Register($uname,$email,$pass);
+	if(!isset($_SESSION['loggedin']))
+		{
+			$_SESSION['redirectURL']=$_SESSION['REQUEST_URI'];
+			header('location:login1.php');
+		}
+
+}
  
 ?>
 
@@ -82,25 +99,3 @@ session_unset();
             <script src="js/register.js"></script>
      </body>
 </html>
-
-<?php
-
-
- 	include 'client.php';
-
-if(isset($_POST['signin']))
-{
-	$data=new Tourist();
-   	$uname =$_POST['uname'];
-   	$email =$_POST['email'];
-    $email =$_POST['address'];
-   	$pass  =$_POST['pass'];
-	$data->Register($uname,$email,$pass);
-	if(!isset($_SESSION['loggedin']))
-		{
-			$_SESSION['redirectURL']=$_SESSION['REQUEST_URI'];
-			header('location:login1.php');
-		}
-
-}
-?>
