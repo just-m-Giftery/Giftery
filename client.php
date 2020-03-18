@@ -4,11 +4,11 @@ include 'user.php';
  class client extends User{
 
   
-    public function Register($username,$email,$password,$adress){
+    public function Register($username,$email,$password,$address){
 			$this->username=$username;
 			$this->email=$email;
 			$this->password=$password;
-            $this->adress=$adress;
+            $this->address=$address;
             $DB = new  DaBa();
 			$check=$DB->Insertuser($username,$email,$password,$address);
           //echo "done";

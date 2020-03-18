@@ -8,9 +8,10 @@ if(isset($_POST['signin']))
 	$data=new client();
    	$uname =$_POST['uname'];
    	$email =$_POST['email'];
-    $email =$_POST['address'];
-   	$pass  =$_POST['pass'];
-	$data->Register($uname,$email,$pass);
+    $pass =$_POST['pass'];
+    $address =$_POST['address'];
+   
+	$data->Register($uname,$email,$pass,$address);
 	if(!isset($_SESSION['loggedin']))
 		{
 			$_SESSION['redirectURL']=$_SESSION['REQUEST_URI'];
