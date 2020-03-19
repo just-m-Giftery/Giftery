@@ -26,7 +26,7 @@ body
 {
     border-radius:30px;
     background-color:rgba(0,0,0,0.2)!important;
-    color: #808080!important;
+    color: #fff!important;
     font-size: 18px;
     margin-top: 20px;
     width: 100%;
@@ -82,6 +82,8 @@ body
 {
   
     color: #fff;
+    position: absolute;
+    bottom: 40px;
 }
 .Copyright-link a
 {
