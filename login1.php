@@ -39,7 +39,7 @@ if(isset($_POST['signup']))
       <link rel="stylesheet" href="css/all.css" />
       <link rel="stylesheet" href="css/bootstrap.min.css" />
         <link href="https://fonts.googleapis.com/css?family=Alex+Brush&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="css/login1.css" />
+      <link rel="stylesheet" href="css/login.css" />
   </head>
     <body>
     
