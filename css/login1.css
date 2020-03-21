@@ -6,7 +6,7 @@ a,a:hover
 
 body
 {
-    background-image: url(../images/logo.jpg);
+    background-image: url(../images/ADB.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -81,7 +81,7 @@ body
 .Copyright
 {
   
-    color: #fff;
+    color: #202020;
     position: absolute;
     bottom: 40px;
 }
@@ -89,5 +89,6 @@ body
 {
    
     color: #3498db;
+    
 
 }

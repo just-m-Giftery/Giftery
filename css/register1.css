@@ -6,7 +6,7 @@ a,a:hover
 
 body
 {
-    background-image: url(../images/logo.jpg);
+    background-image: url(../images/ADB.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -26,7 +26,7 @@ body
 {
     border-radius:30px;
     background-color:rgba(0,0,0,.2)!important;
-    color: #808080!important;
+    color: #fff!important;
     font-size: 18px;
     margin-bottom: 10px;
     width: 100%;
@@ -79,7 +79,9 @@ body
 .Copyright
 {
   
-    color: #fff;
+    color: #202020;
+    position: absolute;
+    bottom: 23px;
 }
 .Copyright-link a
 {
