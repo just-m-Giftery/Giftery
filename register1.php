@@ -8,9 +8,10 @@ if(isset($_POST['signin']))
 	$data=new client();
    	$uname =$_POST['uname'];
    	$email =$_POST['email'];
-    $email =$_POST['address'];
-   	$pass  =$_POST['pass'];
-	$data->Register($uname,$email,$pass);
+    $pass =$_POST['pass'];
+    $address =$_POST['address'];
+   
+	$data->Register($uname,$email,$pass,$address);
 	if(!isset($_SESSION['loggedin']))
 		{
 			$_SESSION['redirectURL']=$_SESSION['REQUEST_URI'];
@@ -30,7 +31,7 @@ if(isset($_POST['signin']))
       <link rel="stylesheet" href="css/all.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <link href="https://fonts.googleapis.com/css?family=Alex+Brush&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="css/register1.css" />
+      <link rel="stylesheet" href="css/register.css" />
   </head>
     <body>
     

@@ -25,29 +25,29 @@ body
 .myinpt
 {
     border-radius:30px;
-    background-color:rgba(0,0,0,0.2)!important;
-    color: #fff!important;
+    background-color:rgba(0,0,0,.2)!important;
+    color: #808080!important;
     font-size: 18px;
-    margin-top: 20px;
+    margin-bottom: 10px;
     width: 100%;
 }
-
-.myicone,.myicone2
+.myicone,.myicone2,.myicone3
 {
     position: absolute;
     right: 20px;
     top: 10px;
     color: #ffffff;
+  
+    
+    
 }
-#myicone1,#myicone2
+.myicone,.myicone2
 {
-    cursor: pointer;
+      cursor: pointer;
 }
-.checkbox
-{
-    background-color:red;
 
-}
+
+
 .check-info
 {
     color: #ffffff;
@@ -55,7 +55,6 @@ body
 }
 .mybtn
 {
-
 
   border-radius:30px;
   color: #ffffff;
@@ -71,7 +70,6 @@ body
 {
     color: #ffffff;
     font-size: 20px;
-     
 }
 .create
 {
@@ -83,11 +81,11 @@ body
   
     color: #fff;
     position: absolute;
-    bottom: 40px;
+    bottom: 23px;
 }
 .Copyright-link a
 {
    
-    color: #3498db;
+    color:#3498db;
 
 }

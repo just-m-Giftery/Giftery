@@ -6,7 +6,7 @@ a,a:hover
 
 body
 {
-    background-image: url(../images/logo.jpg);
+    background-image: url(../images/ADB.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -80,6 +80,9 @@ input[type='file']::-webkit-file-upload-button {
     font-style: italic;
     font-size: 80px;
     font-family: 'Alex Brush', cursive;
+}
+.top .btn{
+    border-radius: 45%;
 }
 .mybtn_log
 {

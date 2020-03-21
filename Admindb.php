@@ -44,11 +44,14 @@ if(isset($_POST['deleteproduct']))
       <link rel="stylesheet" href="css/admindb.css" />
   </head>
     <body>
-    <a class="btn btn-primary float-right mt-5 mx-5 text-light" href="login1.php">logout</a>
+   
             <section class="top">
             <div class="container d-flex justify-content-center text-center pt-2 ">
+              
              <div><a href="Admindb.php"><h2>TheGiftery</h2></a></div>
+                     <div>  <a class="btn btn-primary text-light " href="login1.php">logout</a></div>
             </div>
+             
         </section>
 
              <section class="AdminDB">
@@ -65,7 +68,7 @@ if(isset($_POST['deleteproduct']))
                            name="pname" required placeholder="Product name" />
                    </div> 
                      <div class="position-relative ">
-                    <input class="form-control myinpt_log" type="text"
+                    <input class="form-control myinpt_log" type="number"
                            name="pprice" required placeholder="Product price" />
                    </div> 
                      <div class="position-relative">
@@ -106,15 +109,21 @@ if(isset($_POST['deleteproduct']))
 
 
                   </form>
+                        
                 </div>
+                    
                 </div>
+                 
                  </div>
 </section>
+        
+        
 
-         <section class="py-2 mt-4 px-5 border-top border-primary fixed-bottom footeer">
+         <section class="py-2 mt-4 px-5 border-top border-primary footeer ">
             <span class="Copyright">Copyright © 2020 UIGRID | All Rights Reserved | 
                 <span class="Copyright-link"><a href="Admindb.php">www.thegiftery.com</a> </span>
             </span>
+       
         </section>
 
         <script src="js/jquery-3.4.1.min.js"></script>
