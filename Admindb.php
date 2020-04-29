@@ -20,10 +20,19 @@ if(isset($_POST['addproduct']))
    	$pdesc=$_POST['pdesc'];
     $price=$_POST['pprice'];
    	$pimg=$_POST['pimg'];
-    $ptype=$_POST['ptype'];
-    $A->addproduct_A($pname,$price,$pdesc,$ptype,$pimg);
+    $A->addproduct_A($pname,$price,$pdesc,$pimg);
 }
-
+if(isset($_POST['UpdateProduct']))
+{
+    
+   	$pname=$_POST['pname'];
+    $p_new_name=$_POST['p_new_name'];
+   	$pdesc=$_POST['pdesc'];
+    $price=$_POST['pprice'];
+   	$pimg=$_POST['pimg'];
+  
+    $A->Updateproduct_A($pname,$p_new_name,$price,$pdesc,$pimg);
+}
 if(isset($_POST['deleteproduct']))
 {
   
@@ -41,7 +50,7 @@ if(isset($_POST['deleteproduct']))
       <link rel="stylesheet" href="css/all.css" />
       <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Alex+Brush&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="css/admindb.css" />
+      <link rel="stylesheet" href="css/admiindb.css" />
   </head>
     <body>
    
@@ -57,9 +66,9 @@ if(isset($_POST['deleteproduct']))
              <section class="AdminDB mb-5 py-5">
             <div class="container ">
                 <div class="row d-flex justify-content-around">
-                    <div class="col-md-4 ">
+                   <div class="col-md-4 ">
              
-                <form method="post" class="py-2">
+                <form method="post" class="py-2 add">
                     <h3 class=" py-3 text-center text-primary">
                     Add product
                     </h3>
@@ -92,11 +101,48 @@ if(isset($_POST['deleteproduct']))
 
                   </form>
                 </div>
-                    
-           
+                  <div class="col-md-4 ">
+             
+                <form method="post" class="py-2 update">
+                    <h3 class=" py-3 text-center text-primary">
+                    Update product
+                    </h3>
+                   <div class="position-relative ">
+                    <input class="form-control myinpt_log" type="text"
+                           name="pname" required placeholder="Product name" />
+                   </div> 
+                    <div class="position-relative ">
+                    <input class="form-control myinpt_log" type="text"
+                           name="p_new_name" required placeholder="new Product name" />
+                   </div>
+                     <div class="position-relative ">
+                    <input class="form-control myinpt_log" type="number"
+                           name="pprice" required placeholder="New Product price" />
+                   </div> 
+                     <div class="position-relative">
+                         <textarea class="form-control myinpt_log" type="text"
+                                   name="pdesc" 
+                          required placeholder=" New Product description" >
+                         </textarea> 
+                    </div> 
+                   
+                    <h6 class="text-center pt-4 px-2 text-primary">
+                    product photo
+                    </h6>
+                  <input required class="py-2 px-4 text-center" type="file" id="Place Photo"
+                         name="pimg">
+                
+
+                   <div class="text-center py-3"> 
+               <button id="myBtn_log" class="mybtn_log btn btn-primary form
+                       " type="submit" name="UpdateProduct"> Update </button></div>
+
+
+                  </form>
+                </div>
                   <div class="col-md-4 pt-5  ">
              
-                <form method="post" class="mt-5 py-3">
+                <form method="post" class="mt-5 py-3 delete">
                     <h3 class="m-auto py-3 px-2 text-center text-primary">
                     Delete product
                     </h3>
@@ -130,6 +176,7 @@ if(isset($_POST['deleteproduct']))
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="dist/bundle.js"></script>
+     
      </body>
 </html>
 
