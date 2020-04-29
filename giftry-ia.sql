@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 18, 2020 at 07:17 PM
+-- Generation Time: Apr 29, 2020 at 04:03 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.40
 
@@ -33,18 +33,15 @@ CREATE TABLE `product` (
   `name` varchar(200) NOT NULL,
   `price` int(50) NOT NULL,
   `product_desc` varchar(100) NOT NULL,
-  `img` varchar(255) NOT NULL,
-  `type` varchar(100) NOT NULL
+  `img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`id`, `name`, `price`, `product_desc`, `img`, `type`) VALUES
-(0, 'Al Abd Biscuit With Coconut- 15 Pieces', 32, 'Brand: Al Abd\r\nType: Biscuits, Cookies & Crackers\r\nSize: 250 Gm\r\nPackaging: Box           ', 'item_XXL_38655519_150657188.jpg', ''),
-(0, 'Dell Inspiron G5 5590', 27666, '             Gaming Laptop - Intel Core i7-9750H, 15.6 Inch, 1 TB Plus 512 SSD, 16 GB RAM, NVIDIA Ge', 'item_XL_99997917_62e00e7b657be.jpg', ''),
-(0, 'Lazurd Set Of 13 Pieces Cookware - Pink', 925, '       Brand:Lazurd\r\nType:Cookware Sets\r\nColor:Pink\r\nMaterial:Granite\r\nDiameter:16-18-22-26-18-22-24', 'item_XL_90204017_e9916f48e60c0.jpg', '');
+INSERT INTO `product` (`id`, `name`, `price`, `product_desc`, `img`) VALUES
+(1, 'kiuy', 800, '            uiopkjhg             ', '9p.jpeg');
 
 -- --------------------------------------------------------
 
@@ -73,20 +70,33 @@ INSERT INTO `user` (`id`, `username`, `email`, `password`, `address`) VALUES
 --
 
 --
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
