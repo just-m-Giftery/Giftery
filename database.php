@@ -58,11 +58,19 @@ class DaBa{
     
     
     
-    public function Insertproduct($pname,$price,$pdesc,$ptype,$pimg){
+    public function Insertproduct($pname,$price,$pdesc,$pimg){
 			$sql =  " INSERT INTO  product
-            (name,price,product_desc,img,type) 
+            (name,price,product_desc,img) 
 			                   VALUES
-                     ('$pname','$price','$pdesc','$pimg','$ptype') ";
+                     ('$pname','$price','$pdesc','$pimg') ";
+  			$result=$this->connect()->query($sql);
+		   	return $result;
+		 }
+    
+     public function UpdateProduct($pname,$p_new_name,$price,$pdesc,$pimg)
+     {
+			$sql =  " Update  product set   name='$p_new_name' , price='$price' , product_desc='$pdesc' , img='$pimg'  where  name= '$pname' ";
+           
   			$result=$this->connect()->query($sql);
 		   	return $result;
 		 }
@@ -72,9 +80,8 @@ class DaBa{
     
      public function displayproudect()  
     {
-            $sql = "SELECT * FROM product ";
-    
-           $result=$this->connect()->query($sql);
+            $sql ="SELECT * FROM product ";
+            $result=$this->connect()->query($sql);
 			$numRows=$result->num_rows;
 			if($numRows > 0){
 				while ($row=$result->fetch_assoc()) {

@@ -4,18 +4,26 @@ include 'user.php';
 class Admin extends User{
        
    
-    public function addproduct_A($pname,$price,$pdesc,$ptype,$pimg)
+    public function addproduct_A($pname,$price,$pdesc,$pimg)
     {
             $this->pname=$pname;
 			$this->price=$price;
 			$this->pdesc=$pdesc;
-            $this->ptype=$ptype;
             $this->pimg=$pimg;
             $DB = new  DaBa();
-			$check=$DB->Insertproduct($pname,$price,$pdesc,$ptype,$pimg);
+			$check=$DB->Insertproduct($pname,$price,$pdesc,$pimg);
     }
     
-       
+           public function Updateproduct_A($pname,$p_new_name,$price,$pdesc,$pimg)
+    {
+            $this->pname=$pname;
+			$this->price=$price;
+			$this->pdesc=$pdesc;
+          
+            $this->pimg=$pimg;
+            $DB = new  DaBa();
+			$check=$DB->UpdateProduct($pname,$p_new_name,$price,$pdesc,$pimg);
+    }
     public function Deleteproduct_A($pname)
     {
             $this->pname=$pname;
