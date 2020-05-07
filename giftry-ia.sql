@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 29, 2020 at 04:03 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 5.6.40
+-- Generation Time: May 08, 2020 at 01:02 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -41,7 +40,9 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `price`, `product_desc`, `img`) VALUES
-(1, 'kiuy', 800, '            uiopkjhg             ', '9p.jpeg');
+(4, 'HP 9EV92EA ABV Pavilion 15-dk0028ne Gaming Laptop', 18999, '            15.6 Inch FHD IPS, Intel Core i7-9750H, 16 GB RAM, 1 TB SATA and 256 GB PCIe, NVIDIA GeF', 'HP.png'),
+(5, 'Lenovo YOGA 730 ', 40000, '           Core i7-8550U, 15.6 Inch 4K UHD , 16GB, 1TB, nVidia GTX1050 4GB, Win10, English Keyboard ', 'Yoga.png'),
+(6, 'Intel Core i7-9750H, 15.6 Inch, 1 TB Plus 512 SSD, 16 GB RAM, NVIDIA GeForce RTX 2070W10 8 GB VGA, Windows - Black', 26999, '        Intel Core i7-9750H, 15.6 Inch, 1 TB Plus 512 SSD, 16 GB RAM, NVIDIA GeForce RTX 2070W10 8 G', 'G5.png');
 
 -- --------------------------------------------------------
 
@@ -90,7 +91,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user`
