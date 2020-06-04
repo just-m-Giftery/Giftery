@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2020 at 01:02 AM
+-- Generation Time: Jun 04, 2020 at 05:38 PM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.5
+-- PHP Version: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,9 +40,9 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `price`, `product_desc`, `img`) VALUES
-(4, 'HP 9EV92EA ABV Pavilion 15-dk0028ne Gaming Laptop', 18999, '            15.6 Inch FHD IPS, Intel Core i7-9750H, 16 GB RAM, 1 TB SATA and 256 GB PCIe, NVIDIA GeF', 'HP.png'),
-(5, 'Lenovo YOGA 730 ', 40000, '           Core i7-8550U, 15.6 Inch 4K UHD , 16GB, 1TB, nVidia GTX1050 4GB, Win10, English Keyboard ', 'Yoga.png'),
-(6, 'Intel Core i7-9750H, 15.6 Inch, 1 TB Plus 512 SSD, 16 GB RAM, NVIDIA GeForce RTX 2070W10 8 GB VGA, Windows - Black', 26999, '        Intel Core i7-9750H, 15.6 Inch, 1 TB Plus 512 SSD, 16 GB RAM, NVIDIA GeForce RTX 2070W10 8 G', 'G5.png');
+(4, 'HP 9EV92EA ABV Pavilion 15-dk0028ne Gaming Laptop', 18999, '       15.6 Inch FHD IPS, Intel Core i7-9750H, 16 GB RAM, 1 TB SATA and 256 GB PCIe, NVIDIA GeF     ', 'item_XL_55262628_e20003accee60.jpg'),
+(8, 'Lenovo YOGA 730 ', 40000, '                      Core i7-8550U, 15.6 Inch 4K UHD , 16GB, 1TB, nVidia GTX1050 4GB, Win10, Englis', 'item_XL_99997917_62e00e7b657be.jpg'),
+(9, 'Intel Core i7-9750H, 15.6 Inch, 1 TB Plus 512 SSD, 16 GB RAM, NVIDIA GeForce RTX 2070W10 8 GB VGA, Windows - Black', 55000, '           Intel Core i7-9750H, 15.6 Inch, 1 TB Plus 512 SSD, 16 GB RAM, NVIDIA GeForce RTX 2070W10 ', 'item_XL_110270193_ba7990649cd9e.jpg');
 
 -- --------------------------------------------------------
 
@@ -91,7 +91,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user`
